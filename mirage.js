@@ -47,6 +47,19 @@ export function makeServer() {
             });
 
             this.get("teams", { teams: ["Technology", "Business", "Accounting"] });
+
+            this.patch('/employees/:id', (schema, request) => {
+                let newAttrs = JSON.parse(request.requestBody);
+                let id = request.params.id;
+                let employee = schema.employees.find(id);
+              
+                if (newAttrs.manager) {
+                  let manager = schema.employees.find(newAttrs.managerId);
+                  employee.update({ manager });
+                }
+              
+                return employee.update(newAttrs);
+              });
         },
 
         seeds(server) {
