@@ -1,0 +1,44 @@
+/* TODO: create a file with thematic css variables */
+.pageWrapper {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    overflow-y: auto;
+    flex-basis: 30%;
+    border-right: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    flex-basis: 70%;
+}
+
+.searchWrapper {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.searchBoxWrapper {
+    position: relative;
+}
+
+.searchBoxWrapper::before {
+    content: url(/search.svg);
+    width: 1.25rem;
+    position: absolute;
+    margin-top: 1.5rem;
+    left: 0.5rem;
+}
+
+.searchBox {
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    line-height: 1;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 1rem;
+}

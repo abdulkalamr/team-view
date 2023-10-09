@@ -1,0 +1,14 @@
+.employeeNode {
+    display: inline-block;
+    padding: 0.6rem;
+    border: 1px solid #000;
+}
+
+.name {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.designation {
+    font-size: 0.6rem;
+}
